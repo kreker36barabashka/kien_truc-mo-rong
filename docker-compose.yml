@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  service1:
+    image: service1_image
+    ports:
+      - '8080:8080'
+    networks:
+      - kien_truc_network
+
+  service2:
+    image: service2_image
+    ports:
+      - '8081:8081'
+    networks:
+      - kien_truc_network
+
+networks:
+  kien_truc_network:
+    driver: bridge
